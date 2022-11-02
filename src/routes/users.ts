@@ -3,9 +3,9 @@ import {getUsers,createdonations,redonation,checkdonations} from '../controllers
 import asyncMiddleware from "../../middleware/async";
 const router = Router();
 
-router.get('/getusers', asyncMiddleware(getUsers));
-router.post('/receivedonation', asyncMiddleware(createdonations));
-router.put('/redonation/:id', asyncMiddleware(redonation));
-router.get('/checkdonations/:id', asyncMiddleware(checkdonations));
+router.get('/getusers', getUsers);
+router.post('/receivedonation', createdonations);
+router.put('/redonation/:id', redonation);
+router.get('/checkdonations/:id', checkdonations);
 
 export default router;
